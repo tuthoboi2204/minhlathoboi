@@ -1,15 +1,229 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Mình là Thơ Bội</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mình là Thơ Bội chơi piano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Cấu hình chung theo yêu cầu */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
+        /* Header & Navigation */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            color: #754f23;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #5c3b16;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Hero Section (Hiệu ứng lơ lửng cho 2 hình) */
+        .hero-section {
+            padding: 60px 0;
+        }
+        .hero-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .hero-row:last-child {
+            margin-bottom: 0;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text h3 {
+            font-size: 14px;
+            color: #754f23;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .hero-img-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        /* Tạo hiệu ứng lơ lửng */
+        .floating-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            animation: floatAnimation 4s ease-in-out infinite;
+        }
+        /* Hình thứ 2 trễ nhịp một chút cho tự nhiên */
+        .hero-row:nth-child(2) .floating-img {
+            animation-delay: 2s;
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Blog/Journal Section */
+        .journal-section {
+            padding: 40px 0 60px 0;
+            border-top: 1px solid #f0f0f0;
+        }
+        .journal-box {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 16px;
+            color: #754f23;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .journal-box p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        .journal-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #f0f0f0;
+            padding: 25px 0;
+            text-align: center;
+            color: #736c64;
+        }
+    </style>
+</head>
 <body>
 
-<h1>Bội chơi piano</h1>
+    <header>
+        <div class="container header-content">
+            <h1>Mình là Thơ Bội chơi piano.</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Performances</a></li>
+                    <li><a href="#">About me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<p>Hi, mình là Bội, Bội yêu piano và viết lách. Đây là nhật ký nhỏ ghi nhớ hành trình luyện tập của mình.</p>
+    <div class="banner">
+        <img src="https://i.pinimg.com/736x/f7/ce/57/f7ce57290113e20bbdfbd2064419ca0c.jpg" alt="Thơ Bội Piano Banner">
+    </div>
+
+    <section class="hero-section">
+        <div class="container">
+            
+            <div class="hero-row">
+                <div class="hero-img-wrapper">
+                    <img class="floating-img" src="https://cdn.elleman.vn/y4ReTabYQ9oBE3o2ZMDyl_pL9sicZHidcSytvV5G6Ag/rs:fit:1152:0/quality:82/2024/05/23/233744/doraemon_elleman.jpg@webp" alt="Doraemon">
+                </div>
+                <div class="hero-text">
+                    <h3>DOREAMON | YUME WO KANAETE</h3>
+                    <p>Yume wo Kanaete là ca khúc gắn liền với Doraemon, mang thông điệp về ước mơ, tình bạn và niềm tin vào tương lai qua giai điệu vui tươi, giàu cảm xúc.</p>
+                </div>
+            </div>
+
+            <div class="hero-row">
+                <div class="hero-text">
+                    <h3>燕无歇 | YẾN VÔ HIẾT</h3>
+                    <p>燕無歇 mang đậm màu sắc cổ phong, đưa người nghe vào câu chuyện đầy nhớ thương và ly biệt. Giai điệu lúc trầm lúc bổng gợi nên nỗi buồn man mác khó quên.</p>
+                </div>
+                <div class="hero-img-wrapper">
+                    <img class="floating-img" src="https://i.pinimg.com/1200x/bb/5e/d6/bb5ed6c33d43dc898aa1b14c800d3b88.jpg" alt="Yến Vô Khiết">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="journal-section">
+        <div class="container">
+            
+            <div class="journal-box">
+                <h2>Hành trình từ những nốt nhạc bập bẹ đầu tiên</h2>
+                <p>Tôi không phải là một nghệ sĩ piano chuyên nghiệp, cũng chẳng xuất thân từ trường lớp nghệ thuật danh giá nào. Tôi tìm đến cây đàn này chỉ bằng niềm đam mê thuần khiết của một người tay ngang. Giai đoạn đầu thực sự là một thử thách lớn đối với tôi khi đôi bàn tay còn cứng nhắc, mắt nhìn nốt nhạc còn chậm chạp và những âm thanh phát ra đôi khi thật ngô nghê.</p>
+                <p>Thế nhưng, chính những khó khăn ban đầu ấy lại trở thành động lực thôi thúc tôi cố gắng nhiều hơn mỗi ngày. Thay vì nản lòng, tôi chọn cách kiên nhẫn bám trụ lấy từng phím đàn đen trắng. Tôi nhận ra rằng học piano không phải cuộc đua tốc độ, mà là một hành trình rèn luyện sự bền bỉ của chính bản thân.</p>
+            </div>
+
+            <div class="journal-box">
+                <h2>Gói ghém bình yên qua một giờ luyện tập mỗi ngày</h2>
+                <p>Dù công việc bận rộn đến đâu, tôi vẫn luôn tự hứa với bản thân sẽ dành ra ít nhất một tiếng đồng hồ mỗi tối để ngồi bên cây đàn. Đó là khoảng thời gian tĩnh lặng quý giá nhất trong ngày, nơi tôi hoàn toàn tách biệt khỏi những ồn ào, lo toan của cuộc sống bộn bề ngoài kia để chìm đắm vào không gian của âm thanh.</p>
+                <p>Mỗi trang nhật ký luyện tập được ghi lại không chỉ là minh chứng cho việc tôi đã thuộc thêm một giai điệu mới hay chạy ngón mượt mà hơn. Đó còn là nơi tôi cất giữ trọn vẹn những cảm xúc, những niềm vui giản dị và cả sự trưởng thành của một người chơi nhạc nghiệp dư qua năm tháng.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © boichoipiano.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
